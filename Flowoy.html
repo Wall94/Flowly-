@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav-styles.css">
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="slider.js" defer></script>
+</head>
+<body>
+    <header role="banner">
+        <figure class="logo">
+            <img src="img/logo800.png" alt="Logo da empresa">
+        </figure>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="Flowoy.html">HOME</a></li>
+                <li><a href="Sobre_nós.html">SOBRE NÓS</a></li>
+                <li><a href="Serviços.html">SERVIÇOS</a></li>
+                <li><a href="Contato.html">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="hero-section">
+            <article class="hero-content">
+               <!-- <h1 class="visually-hidden">Storify - Marketing Digital</h1>-->
+                <div class="text-blocks" aria-label="Mensagens principais">
+                    <p class="block">SUA MARCA</p>
+                    <p class="block">NA INTERNET</p>
+                    <p class="block">COM ESTRATÉGIA</p>
+                    <p class="block">E TECNOLOGIA</p>
+                </div>
+                <a href="Serviços.html" class="explore-btn" aria-label="Conheça mais sobre nossos serviços">CONHEÇA MAIS</a>
+            </article>
+            <section class="hero-image" aria-label="Galeria de imagens">
+                <div class="slider" role="region" aria-label="Carrossel de imagens">
+                    <button class="prev-btn" aria-label="Imagem anterior">&lt;</button>
+                    <img src="" alt="Mobile Design" class="phone-mockup">
+                    <button class="next-btn" aria-label="Próxima imagem">&gt;</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <section class="footer-left">
+            <p><small>Flowly Copyright 2025</small></p>
+            <nav aria-label="Links do rodapé">
+                <a href="#">Política de Privacidade</a>
+                <span>|</span>
+            </nav>
+        </section>
+        <section class="footer-right">
+            <address class="phone">(11) 96161-2415</address>
+            <nav class="social-icons" aria-label="Redes sociais">
+                <a href="#"><img src="img/instagram-removebg-preview.png" alt="Instagram da empresa"></a>
+            </nav>
+        </section>
+    </footer>
+    
+    <style>
+        /* Estilos para os links de navegação */
+        nav ul li a {
+            display: inline-block;
+            background-color: transparent;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        nav ul li a:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #ff3e3e;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+            z-index: -1;
+        }
+        
+        nav ul li a:hover {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 62, 62, 0.2);
+        }
+        
+        nav ul li a:hover:before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        nav ul li a:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Estilo para o link da página atual */
+        nav ul li a.active, 
+        nav ul li a:active {
+            background-color: #ff3e3e;
+            border-color: #ff3e3e;
+            color: white;
+        }
+    </style>
+</body>
+</html>
